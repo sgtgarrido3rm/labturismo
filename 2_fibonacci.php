@@ -1,11 +1,25 @@
 <?php
+/**
+* Criado em 05/04/2023
+* 
+* 2) Fibonacci
+* 
+* @author Luis Olavo Garrido (sgtgarrido3rm@gmail.com)
+*/
+
 function fibonacci($n) {
-  $fibo = array(0, 1);
-  for ($i = 2; $i < $n; $i++) {
-    $fibo[$i] = $fibo[$i-1] + $fibo[$i-2];
-  }
-  sort($fibo);
-  return $fibo;
+
+	if ($n == 1) {
+  		$fibo = array(0); // se for apenas um termo do fibo, exibe e não faz mais nada
+	} else {
+		$fibo = array(0, 1);
+		for ($i = 2; $i < $n; $i++) {
+			$fibo[$i] = $fibo[$i-1] + $fibo[$i-2];
+		}
+		sort($fibo);
+	}
+
+	return $fibo;
 }
 
 

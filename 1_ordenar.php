@@ -1,4 +1,11 @@
 <?php
+/**
+* Criado em 05/04/2023
+* 
+* 1) Você consegue ordenar?
+* 
+* @author Luis Olavo Garrido (sgtgarrido3rm@gmail.com)
+*/
 
 function sortArray($arr) {
     // frequências de cada elemento
@@ -19,9 +26,10 @@ function sortArray($arr) {
 $arr = [3, 1, 2, 2, 4];
 $sortArr = sortArray($arr);
 
+echo "<pre>";
+
 echo('Caso de teste 01:<br />');
 print_r($sortArr);
-
 
 // Caso de teste 02
 $arr = [8, 5, 5, 5, 5, 1, 1, 1, 4, 4];
@@ -36,5 +44,5 @@ $sortArr = sortArray($arr);
 
 echo('<hr />Caso de teste 03:<br />');
 print_r($sortArr);
-
+echo "</pre>";
 ?>
