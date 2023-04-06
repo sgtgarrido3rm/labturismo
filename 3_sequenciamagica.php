@@ -13,15 +13,16 @@ function countSequence($vowels, $splited){
 	$weight = 1;
 	$positions = [];
 
-	$isMagic = isMagic($splited);
+	$isMagic = isMagic($splited); // chamada da verificação
+	//retorna zero se não for mágica
 	if(!$isMagic){
 		return 0;
 	}
-	
+	// iteração do array verificando as posições das vogais
 	foreach ($splited as $pos => $sp) {
 		$positions[$pos] = $vowels[$sp];
 	}
-
+	// iteração do array verificando o peso de cada e fazendo a contagem
 	foreach ($positions as $value) {
 		if($value == $weight){
 			$count++;
@@ -34,12 +35,13 @@ function countSequence($vowels, $splited){
 	return $count;
 }
 
+// verifica se existe todas as vogais
 function isMagic($arr){
 	$count = count(array_unique($arr));
 	return $count >= 5;
 }
 
-// array de vogais
+// array de vogais - valor do peso de cada vogal
 $vowels = ['a' => 1, 'e' => 2, 'i' => 3, 'o' => 4, 'u' => 5];
 
 # Caso de teste 01
